@@ -10,7 +10,7 @@ redis = Redis(host='redis', port=6379, decode_responses=True)
 @app.get("/")
 def root():
     count = redis.incr("request_count")
-    return {"message": "Hello Godka!", "requests": count, "server": os.getenv("HOSTNAME", "unknown")}
+    return {"message": "CI/Cd check!", "requests": count, "server": os.getenv("HOSTNAME", "unknown")}
 
 @app.get("/health")
 def health():
