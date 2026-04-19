@@ -1,5 +1,3 @@
-![GitHub Actions](https://github.com/Godkaa/pet/actions/workflows/deploy.yml/badge.svg)
-
 ## О проекте
 
 Учебный проект для портфолио
