@@ -9,6 +9,7 @@ services:
     command: redis-server --appendonly yes
     networks:
       - app-network
+    restart: unless-stopped
 
   app:
     image: YOUR_DOCKER_USERNAME/pet:latest
@@ -23,6 +24,7 @@ services:
       driver: "json-file"
       options:
         max-size: "10m"
+    restart: unless-stopped
 
   nginx:
     image: nginx:alpine
@@ -35,6 +37,7 @@ services:
       - app
     networks:
       - app-network
+    restart: unless-stopped
 
 networks:
   app-network:
