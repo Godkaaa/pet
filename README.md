@@ -25,7 +25,7 @@
 | Registry | Docker Hub |
 | Сервер | VPS (Ubuntu) |
 | Версионирование | Git |
-
+| **Мониторинг** | Prometheus + Grafana |
 ---
 
 ## CI/CD Pipeline
@@ -52,3 +52,23 @@
 | `VPS_HOST` | IP адрес VPS |
 | `VPS_USER` | Пользователь на VPS |
 | `VPS_SSH_KEY` | Приватный SSH ключ |
+
+---
+
+### Мониторинг
+
+| Сервис | URL | 
+|--------|------------|
+| Prometheus | http://79.141.65.105:9090 |
+| Grafana | http://79.141.65.105:3000 |
+
+##  Prometheus Metrics
+
+| Метрика | Описание |
+|---------|----------|
+| `http_requests_total` | Общее количество запросов |
+| `rate(http_requests_total[1m])` | Запросов в секунду |
+| `http_request_duration_seconds` | Время ответа API (latency) |
+| `process_resident_memory_bytes` | Потребление памяти |
+| `process_cpu_seconds_total` | Время CPU |
+| `up{job="fastapi-app"}` | Жив ли сервис |
