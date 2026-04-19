@@ -11,7 +11,7 @@ services:
       - app-network
 
   app:
-    image: YOUR_DOCKER_USERNAME/devops-pet-project:latest
+    image: YOUR_DOCKER_USERNAME/pet:latest
     restart: always
     depends_on:
       - redis
