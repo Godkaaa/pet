@@ -1,4 +1,4 @@
-![GitHub Actions](https://github.com/Godkaa/devops-pet-project/actions/workflows/deploy.yml/badge.svg)
+![GitHub Actions](https://github.com/Godkaa/pet/actions/workflows/deploy.yml/badge.svg)
 
 ## О проекте
 
@@ -12,8 +12,6 @@
 ### Цели проекта
 - Показать понимание контейнеризации и CI/CD
 - Создать автоматизированный пайплайн "от коммита до продакшена"
-
----
 
 ---
 
